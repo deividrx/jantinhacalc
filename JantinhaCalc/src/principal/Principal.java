@@ -9,8 +9,9 @@ public class Principal {
 
 	public static void main(String[] args) throws IOException {
 		
-		Path path = Paths.get("logo.txt");
-		Scanner logo = new Scanner(path);
+		//Exibir o logo e comandos do programa
+		Path arquivoLogo = Paths.get("logo.txt");
+		Scanner logo = new Scanner(arquivoLogo);
 		String line = "";
 		
 		while (logo.hasNextLine()) {
@@ -18,6 +19,9 @@ public class Principal {
 		}
 		
 		System.out.println(line);
+		logo.close();
+		
+		//Comandos
 		Scanner input = new Scanner(System.in);
 		String comando;
 		
@@ -30,14 +34,14 @@ public class Principal {
 				System.out.println(":)");
 				break;
 			case "mcp":
-				System.out.println(";-;S");
+				System.out.println(";-;");
+				break;
+			case "cpp":
+				System.out.println("hehehe");
+				break;
 			}
 			
-			
 		} while (true);
-		
-		
-		
 		
 	}
 	
