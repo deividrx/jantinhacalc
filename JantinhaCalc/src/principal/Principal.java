@@ -23,7 +23,7 @@ public class Principal {
 				System.out.println("Saindo do programa...");
 				break;
 			default:
-				System.out.println("[ERRO] Comando não encontrado!");
+				System.out.println("[ERRO] Comando \"" + comando + "\" não encontrado!");
 			}
 			
 		} while (!comando.equals("exit"));
