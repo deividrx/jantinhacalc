@@ -28,7 +28,7 @@ public class Principal {
 			
 		} while (!comando.equals("exit"));
 		
-		
+		input.close();
 	}
 	
 }
