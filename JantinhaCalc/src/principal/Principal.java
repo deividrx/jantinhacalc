@@ -1,7 +1,6 @@
 package principal;
 
 import java.io.IOException;
-import java.util.Scanner;
 
 public class Principal {
 
@@ -28,6 +27,8 @@ public class Principal {
 			default:
 				System.out.println("[ERRO] Comando \"" + comando + "\" não encontrado!");
 			}
+			
+			Utils.input.nextLine();
 			
 		} while (!comando.equals("exit"));
 		
