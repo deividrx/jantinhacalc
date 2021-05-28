@@ -16,7 +16,7 @@ public class Principal {
 			comando = Utils.input.nextLine();
 			
 			switch (comando) {
-			case "exit":
+			case "sair":
 				System.out.println("Saindo do programa...");
 				break;
 			case "cp":
