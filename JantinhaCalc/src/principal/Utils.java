@@ -38,7 +38,7 @@ public class Utils {
 		
 		if (op == 'S') {
 			String porcao = "";
-			System.out.println("|=>Alterar porções: ");
+			System.out.println("Alterar porções: ");
 			for (int i = 0; i < vetorC.length; i++) {
 				switch (i) {
 				case 0:

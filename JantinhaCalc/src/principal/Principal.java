@@ -30,7 +30,7 @@ public class Principal {
 			
 			Utils.input.nextLine();
 			
-		} while (!comando.equals("exit"));
+		} while (!comando.equals("sair"));
 		
 		Utils.input.close();
 	}
