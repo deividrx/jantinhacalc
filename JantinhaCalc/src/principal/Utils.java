@@ -10,7 +10,6 @@ public class Utils {
 	public static Scanner input = new Scanner(System.in);
 	
 	public static String printLogo() throws IOException {
-		
 		Path arquivoLogo = Paths.get("logo.txt");
 		Scanner logo = new Scanner(arquivoLogo);
 		String line = "";
@@ -24,7 +23,6 @@ public class Utils {
 	}
 	
 	public static void alterarVetorC(double[] vetorC) {
-		
 		char op;
 		String escolha;
 		
@@ -32,7 +30,7 @@ public class Utils {
 		op = Character.toUpperCase(input.next().charAt(0));
 		
 		while (op != 'S' && op != 'N') {
-			System.out.print("[ERRO] Entrada inválida!\nInformer novamente: ");
+			System.out.print("[ERRO] Entrada inválida!\nInforme novamente: ");
 			op = Character.toUpperCase(input.next().charAt(0));
 		}
 		
@@ -55,25 +53,108 @@ public class Utils {
 					break;
 				}
 				
-				System.out.print(" *" + porcao);
+				System.out.print("*" + porcao);
 				vetorC[i] = input.nextDouble();
 			}
+			
+			input.nextLine();
 			
 		} else {
 			
 			do {
-				System.out.println("Deseja alterar o custo de mais alguma porção: ");
+				System.out.println();
+				int escolha2;
+				System.out.println("====[Opções]====");
+				System.out.println("[1] - Arroz");
+				System.out.println("[2] - Carne");
+				System.out.println("[3] - Salada");
+				System.out.println("[4] - Tropeiro");
+				System.out.print("Qual porção deseja alterar: ");
+				escolha2 = input.nextInt();
+				
+				while(escolha2 != 1 && escolha2 != 2 && escolha2 != 3 && escolha2 != 4) {
+					System.out.print("[ERRO]Entrada inválida, informe novamente: ");
+					escolha2 = input.nextInt();
+				}
+				
+				String porcao = "";
+				
+				switch (escolha2) {
+				case 1:
+					porcao = "Preço do arroz: ";
+					break;
+				case 2:
+					porcao = "Preço da carne: ";
+					break;
+				case 3:
+					porcao = "Preço da salada: ";
+					break;
+				case 4:
+					porcao = "Preço do tropeiro: ";
+					break;
+				}
+				System.out.print("#" + porcao);
+				vetorC[(escolha2) - 1] = input.nextDouble();
+				
+				input.nextLine();
+				
+				System.out.print("Deseja alterar o custo de mais alguma porção: [s/n]");
 				escolha = input.nextLine();
 				
-			} while (escolha.equalsIgnoreCase("sim"));
+			} while (escolha.equalsIgnoreCase("s"));
 			
 		}
 		
-		
-		
-		
+	}
+	
+	public static void mostrarVetorC(double[] vetorC) {
+		String porcao = "";
+		for (int i = 0; i < vetorC.length; i++) {
+			switch (i) {
+			case 0:
+				porcao = "Preço do arroz: ";
+				break;
+			case 1:
+				porcao = "Preço da carne: ";
+				break;
+			case 2:
+				porcao = "Preço da salada: ";
+				break;
+			case 3:
+				porcao = "Preço do tropeiro: ";
+				break;
+			}
+			System.out.println(porcao + vetorC[i]);
+		}
 		
 		
 	}
-	
+
+	public static void mostrarMatrizP(int[][] matrizP) {
+		
+		for (int i = 0; i < matrizP.length; i++) {
+			System.out.println("#Prato: " + (i + 1));
+			for (int j = 0; j < matrizP[0].length; j++) {
+				String porcao = "";
+				switch (j) {
+				case 0:
+					porcao = "Porções de arroz: ";
+					break;
+				case 1:
+					porcao = "Porções de carne: ";
+					break;
+				case 2:
+					porcao = "Porções de salada: ";
+					break;
+				case 3:
+					porcao = "Porções de tropeiro: ";
+					break;
+				}
+				
+				System.out.println(porcao + matrizP[i][j]);
+				
+			}
+		}
+		
+	}
 }

@@ -20,8 +20,19 @@ public class Principal {
 				System.out.println("Saindo do programa...");
 				break;
 			case "cp":
+				System.out.println();
 				Utils.alterarVetorC(vetorCustos);
-				Utils.input.nextLine();
+				System.out.println();
+				break;
+			case "vc":
+				System.out.println();
+				Utils.mostrarVetorC(vetorCustos);
+				System.out.println();
+				break;
+			case "vp":
+				System.out.println();
+				Utils.mostrarMatrizP(numsPorcoes);
+				System.out.println();
 				break;
 			case "mcp":
 				break;
@@ -31,8 +42,8 @@ public class Principal {
 				System.out.println("[ERRO] Comando \"" + comando + "\" não encontrado!");
 			}
 			
-			
 		} while (!comando.equals("sair"));
+		
 		
 		Utils.input.close();
 	}

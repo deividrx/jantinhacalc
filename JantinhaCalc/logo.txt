@@ -5,7 +5,7 @@
 \____/ \__,_//_/ /_/ \__//_//_/ /_//_/ /_/ \__,_/ \____/ \__,_//_/ \___/  
 
 ================================[COMANDOS]================================
-*[sair] - Sair do programa.
-*[cp] - Alterar custo de uma porção.
-*[mcp] - Mostrar custo de produção.
+|[sair]- Sair do programa.         |[vc]– Ver os custos de cada porção.  |
+|[cp]- Alterar custo de uma porção.|[vp]- Ver a composição de cada prato.|
+|[mcp]- Mostrar custo dos pratos.  |
 ==========================================================================
