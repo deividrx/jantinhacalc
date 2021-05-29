@@ -23,6 +23,8 @@ public class Principal {
 				Utils.alterarVetorC(vetorCustos);
 				Utils.input.nextLine();
 				break;
+			case "mcp":
+				break;
 			case "":
 				break;
 			default:
