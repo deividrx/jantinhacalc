@@ -21,6 +21,7 @@ public class Principal {
 				break;
 			case "cp":
 				Utils.alterarVetorC(vetorCustos);
+				Utils.input.nextLine();
 				break;
 			case "":
 				break;
@@ -28,7 +29,6 @@ public class Principal {
 				System.out.println("[ERRO] Comando \"" + comando + "\" não encontrado!");
 			}
 			
-			Utils.input.nextLine();
 			
 		} while (!comando.equals("sair"));
 		
