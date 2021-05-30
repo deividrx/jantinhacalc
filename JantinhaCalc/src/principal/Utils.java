@@ -97,10 +97,20 @@ public class Utils {
 				System.out.print("#" + porcao);
 				vetorC[(escolha2) - 1] = input.nextDouble();
 				
+				while (vetorC[(escolha2) - 1] < 0) {
+					System.out.print("[ERRO] Entrada inválida!\nInforme novamanete: ");
+					vetorC[(escolha2) - 1] = input.nextDouble();
+				}
+				
 				input.nextLine();
 				
-				System.out.print("Deseja alterar o custo de mais alguma porção: [s/n]");
+				System.out.print("Deseja alterar o custo de mais alguma porção: [s/n] ");
 				escolha = input.nextLine();
+				
+				while (!escolha.equalsIgnoreCase("s") && !escolha.equalsIgnoreCase("n")) {
+					System.out.print("[ERRO] Entrada inválida!\nInforme novamente: ");
+					escolha = input.nextLine();
+				}
 				
 			} while (escolha.equalsIgnoreCase("s"));
 			
