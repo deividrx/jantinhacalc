@@ -1,28 +1,12 @@
 package principal;
 
-import java.io.IOException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.Scanner;
 
 public class Utils {
 	
 	public static Scanner input = new Scanner(System.in);
 	
-	public static String printLogo() throws IOException {
-		
-		Path arquivoLogo = Paths.get("logo.txt");
-		Scanner logo = new Scanner(arquivoLogo);
-		String line = "";
-		
-		while (logo.hasNextLine()) {
-		    line += " " + logo.nextLine() + "\n";
-		}
-		
-		logo.close();
-		return line;
-	}
-	
+	//Theo
 	public static void alterarVetorC(double[] vetorC) {
 		char op;
 		String escolha;
@@ -168,4 +152,20 @@ public class Utils {
 		}
 		
 	}
+	
+	//Breno
+	public static void mostrarCustoPrato(int[][] matrizP, double[] vetorC) {
+		
+		double[] valorPrato = new double[matrizP.length];
+	    for(int i = 0; i < matrizP.length; i++) {
+	    	for(int j = 0; j < matrizP[0].length;j++) {
+	    		valorPrato[i]+= vetorC[j]* matrizP[i][j];
+	    	}
+	    }
+	    
+	    for(int i = 0; i < 3; i++) {
+	    	System.out.println("Valor prato " + (i + 1) + ": R$ "+valorPrato[i]);	
+	    }
+	}
+	
 }

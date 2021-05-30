@@ -9,13 +9,14 @@ public class Principal {
 		double[] vetorCustos = {3,4,2,3};
 		int[][] numsPorcoes = {{2,1,1,1},{1,2,1,1},{2,2,0,3}};
 		String comando;
-		System.out.println(Utils.printLogo());
+		
+		Logo logo = new Logo();
+		logo.printLogo();
 		
 		do {
 			System.out.print("administrador@jantinhacalc~$ ");
 			comando = Utils.input.nextLine();
 			
-			//teste
 			switch (comando) {
 			case "sair":
 				System.out.println("Saindo do programa...");
@@ -36,6 +37,9 @@ public class Principal {
 				System.out.println();
 				break;
 			case "mcp":
+				System.out.println();
+				Utils.mostrarCustoPrato(numsPorcoes, vetorCustos);
+				System.out.println();
 				break;
 			case "":
 				break;
