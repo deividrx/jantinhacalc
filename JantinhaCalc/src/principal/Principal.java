@@ -15,6 +15,7 @@ public class Principal {
 			System.out.print("administrador@jantinhacalc~$ ");
 			comando = Utils.input.nextLine();
 			
+			//teste
 			switch (comando) {
 			case "sair":
 				System.out.println("Saindo do programa...");

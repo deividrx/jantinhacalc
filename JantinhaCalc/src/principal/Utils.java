@@ -10,6 +10,7 @@ public class Utils {
 	public static Scanner input = new Scanner(System.in);
 	
 	public static String printLogo() throws IOException {
+		
 		Path arquivoLogo = Paths.get("logo.txt");
 		Scanner logo = new Scanner(arquivoLogo);
 		String line = "";
@@ -124,7 +125,7 @@ public class Utils {
 				porcao = "Preço do tropeiro: ";
 				break;
 			}
-			System.out.println(porcao + vetorC[i]);
+			System.out.println(porcao + "R$ " + vetorC[i]);
 		}
 		
 		
