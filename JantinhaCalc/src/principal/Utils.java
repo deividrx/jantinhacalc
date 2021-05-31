@@ -40,6 +40,11 @@ public class Utils {
 				
 				System.out.print("*" + porcao);
 				vetorC[i] = input.nextDouble();
+				
+				while ( vetorC[i] < 0) {
+					System.out.print("[ERRO] Entrada inválida!\nInforme novamanete: ");
+					vetorC[i] = input.nextDouble();
+				}
 			}
 			
 			input.nextLine();
@@ -82,7 +87,6 @@ public class Utils {
 				vetorC[(escolha2) - 1] = input.nextDouble();
 				
 				while (vetorC[(escolha2) - 1] < 0) {
-					System.out.print("[ERRO] Entrada inválida!\nInforme novamanete: ");
 					vetorC[(escolha2) - 1] = input.nextDouble();
 				}
 				
