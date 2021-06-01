@@ -41,6 +41,11 @@ public class Principal {
 				Utils.mostrarCustoPrato(numsPorcoes, vetorCustos);
 				System.out.println();
 				break;
+			case "acp":
+				System.out.println();
+				Utils.alterarMatrizComposiçaoPrato(numsPorcoes);
+				System.out.println();
+				break;
 			case "":
 				break;
 			default:

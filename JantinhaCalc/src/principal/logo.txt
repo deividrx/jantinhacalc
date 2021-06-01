@@ -7,5 +7,5 @@
 ================================[COMANDOS]================================
 |[sair]- Sair do programa.         |[vc]- Ver os custos de cada porção.  |
 |[cp]- Alterar custo de uma porção.|[vp]- Ver a composição de cada prato.|
-|[mcp]- Mostrar custo dos pratos.  |
+|[mcp]- Mostrar custo dos pratos.  |[acp]- Alterar a Composiçao dos Prato|
 ==========================================================================

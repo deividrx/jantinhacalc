@@ -174,4 +174,37 @@ public class Utils {
 	    }
 	}
 	
+	public static void alterarMatrizComposiçaoPrato(int[][] matrizP) {
+		
+		System.out.println("Informe qual prato você deseja alterar:");
+		int n = input.nextInt();
+		
+		switch (n) {
+		
+		case 1:
+			System.out.print("#Prato: 1 \nPorções de arroz: 2 \\nPorções de carne: 1 \\nPorções de salada: 1 \\nPorções de tropeiro: 1\n");
+			for(int i = 0; i < 4; i++) {
+				System.out.println("Insira a quatidade de porção");
+				 matrizP [1][i] = input.nextInt();
+			}
+			break;
+			
+		case 2:
+			System.out.print("#Prato: 2 \nPorções de arroz: 1 \\nPorções de carne: 2 \\nPorções de salada: 1 \\nPorções de tropeiro: 1\n");
+			for(int i = 0; i < 4; i++) {
+				System.out.println("Insira a quatidade de porção");
+				 matrizP [2][i] = input.nextInt();
+			}
+			break;
+		case 3:
+			System.out.print("#Prato: 3 \nPorções de arroz: 2 \\nPorções de carne: 2 \\nPorções de salada: 0 \\nPorções de tropeiro: 3\n");
+			for(int i = 0; i < 4; i++) {
+				System.out.println("Insira a quatidade de porção");
+				 matrizP [3][i] = input.nextInt();
+			}
+			break;
+		}
+		
+	}
+	
 }
