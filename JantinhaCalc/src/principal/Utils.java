@@ -1,10 +1,12 @@
 package principal;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Utils {
 	
 	public static Scanner input = new Scanner(System.in);
+	public static DecimalFormat df = new DecimalFormat("#,##0.00");
 	
 	//Theo
 	public static void alterarVetorC(double[] vetorC) {
@@ -123,7 +125,7 @@ public class Utils {
 				porcao = "Preço do tropeiro: ";
 				break;
 			}
-			System.out.println(porcao + "R$ " + vetorC[i]);
+			System.out.println(porcao + "R$ " + df.format(vetorC[i]));
 		}
 		
 		
@@ -168,7 +170,7 @@ public class Utils {
 	    }
 	    
 	    for(int i = 0; i < 3; i++) {
-	    	System.out.println("Valor prato " + (i + 1) + ": R$ "+valorPrato[i]);	
+	    	System.out.println("Valor prato " + (i + 1) + ": R$ "+ df.format(valorPrato[i]));	
 	    }
 	}
 	
