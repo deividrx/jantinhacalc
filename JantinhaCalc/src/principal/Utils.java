@@ -8,7 +8,6 @@ public class Utils {
 	public static Scanner input = new Scanner(System.in);
 	public static DecimalFormat df = new DecimalFormat("#,##0.00");
 	
-	//Theo//
 	public static void alterarVetorC(double[] vetorC) {
 		char op;
 		String escolha;
@@ -159,7 +158,6 @@ public class Utils {
 		
 	}
 	
-	//Breno
 	public static void mostrarCustoPrato(int[][] matrizP, double[] vetorC) {
 		
 		double[] valorPrato = new double[matrizP.length];
@@ -176,35 +174,62 @@ public class Utils {
 	
 	public static void alterarMatrizComposiçaoPrato(int[][] matrizP) {
 		
-		System.out.println("Informe qual prato você deseja alterar:");
-		int n = input.nextInt();
+		String escolha;
 		
-		switch (n) {
-		
-		case 1:
-			System.out.print("#Prato: 1 \nPorções de arroz: 2 \\nPorções de carne: 1 \\nPorções de salada: 1 \\nPorções de tropeiro: 1\n");
-			for(int i = 0; i < 4; i++) {
-				System.out.println("Insira a quatidade de porção");
-				 matrizP [1][i] = input.nextInt();
-			}
-			break;
+		do {
+			System.out.println("====[Menu]====");
+			System.out.println("[1] - Prato 1");
+			System.out.println("[2] - Prato 2");	
+			System.out.println("[3] - Prato 3");
+			System.out.print("Informe qual prato você deseja alterar: ");
+			int n = input.nextInt();
 			
-		case 2:
-			System.out.print("#Prato: 2 \nPorções de arroz: 1 \\nPorções de carne: 2 \\nPorções de salada: 1 \\nPorções de tropeiro: 1\n");
-			for(int i = 0; i < 4; i++) {
-				System.out.println("Insira a quatidade de porção");
-				 matrizP [2][i] = input.nextInt();
+			while(n != 1 && n != 2 && n != 3) {
+				System.out.print("[ERRO]Entrada inválida, informe novamente: ");
+				n = input.nextInt();
 			}
-			break;
-		case 3:
-			System.out.print("#Prato: 3 \nPorções de arroz: 2 \\nPorções de carne: 2 \\nPorções de salada: 0 \\nPorções de tropeiro: 3\n");
-			for(int i = 0; i < 4; i++) {
-				System.out.println("Insira a quatidade de porção");
-				 matrizP [3][i] = input.nextInt();
+			
+			System.out.println("#Alterar Prato " + n + ": ");
+			
+			for(int j = 0; j < matrizP[0].length; j++) {
+				String porcao = "";
+				
+				switch (j) {
+				case 0:
+					porcao = "Insira a quatidade de porções de arroz: ";
+					break;
+				case 1:
+					porcao = "Insira a quatidade de porções de carne: ";
+					break;
+				case 2:
+					porcao = "Insira a quatidade de porções de salada: ";
+					break;
+				case 3:
+					porcao = "Insira a quatidade de porções de tropeiro: ";
+					break;
+				}
+				
+				System.out.print(porcao);
+				matrizP[n - 1][j] = input.nextInt();
+				
+				while (matrizP[n - 1][j] < 0) {
+					System.out.print("[ERRO] Entrada inválida!\nInforme novamente: ");
+					matrizP[n - 1][j] = input.nextInt();
+				}
 			}
-			break;
-		}
+			
+			input.nextLine();
+			
+			System.out.print("Deseja alterar a composição de mais algum prato: [s/n] ");
+			escolha = input.nextLine();
+			
+			while (!escolha.equalsIgnoreCase("s") && !escolha.equalsIgnoreCase("n")) {
+				System.out.print("[ERRO] Entrada inválida!\nInforme novamente: ");
+				escolha = input.nextLine();
+			}
+			
+		} while (escolha.equalsIgnoreCase("s"));
 		
 	}
-	
+
 }

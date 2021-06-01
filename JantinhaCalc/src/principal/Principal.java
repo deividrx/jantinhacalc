@@ -54,7 +54,6 @@ public class Principal {
 			
 		} while (!comando.equals("sair"));
 		
-		
 		Utils.input.close();
 	}
 	
