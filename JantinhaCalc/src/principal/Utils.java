@@ -8,7 +8,7 @@ public class Utils {
 	public static Scanner input = new Scanner(System.in);
 	public static DecimalFormat df = new DecimalFormat("#,##0.00");
 	
-	//Theo
+	//Theo//
 	public static void alterarVetorC(double[] vetorC) {
 		char op;
 		String escolha;
